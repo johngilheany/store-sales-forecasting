@@ -17,7 +17,7 @@ Time series decomposition is a statistical technique that involves breaking down
 <br>
 <img src="imgs/seasonal_decomp.png" width="500"/> 
 
-Below we can see average weekly sales. Store 20 is the store with the highest revenue, averaging almost \\$30K per week, with Store 5 being the smallest, averaging just \\$5K per week.    
+Below we can see average weekly sales. Store 20 is the store with the highest revenue, averaging almost \$30K per week, with Store 5 being the smallest, averaging just \$5K per week.    
 <img src="imgs/avg_weekly_sales.png" width="500"/> 
 
 Below we can see average weekly sales per square foot. Store 43 was the most efficient store, selling over \$0.30 per square foot per week, with Store 9 being the least efficient, selling just \$0.07 per square foot per week.    
