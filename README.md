@@ -20,7 +20,7 @@ Time series decomposition is a statistical technique that involves breaking down
 Below we can see average weekly sales. Store 20 is the store with the highest revenue, averaging almost \\$30K per week, with Store 5 being the smallest, averaging just \\$5K per week.    
 <img src="imgs/avg_weekly_sales.png" width="500"/> 
 
-Below we can see average weekly sales per square foot. Store 43 was the most efficient store, selling over \\$0.30 per square foot per week, with Store 9 being the least efficient, selling just \\$0.07 per square foot per week.    
+Below we can see average weekly sales per square foot. Store 43 was the most efficient store, selling over \$0.30 per square foot per week, with Store 9 being the least efficient, selling just \$0.07 per square foot per week.    
 <img src="imgs/avg_weekly_sales_per_sqft.png" width="500"/>
 
 Below, we can also see the autocorrelation and partial autocorrelations of the total weekly sales data. Autocorrelation (ACF) and partial autocorrelation (PACF) are statistical metrics employed in time series analysis to examine the association between a given time series and its past values. Autocorrelation assesses the correlation between a data point and its preceding values at different time lags, aiding in the identification of recurring patterns or cycles within the data. Partial autocorrelation, while also gauging the direct relationship between two time points, adjusts for the influence of intermediary data points. It plays a crucial role in determining the autoregressive component's order in a time series model. Peaks beyond the confidence interval in the partial autocorrelation function suggest potential lag orders relevant for an AR model.
