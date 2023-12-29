@@ -10,6 +10,7 @@ The data was pretty clean, but I needed to merge the three datasets into one and
 
 First, I aggregated total weekly sales (for all 45 Walmart locations) to look at overall trends. We can see large spikes around the holidays in November/December.
 <br>
+<br>
 <img src="imgs/weekly_sales_all_stores.png" width="500"/> 
 
 Time series decomposition is a statistical technique that involves breaking down a time series into its underlying components to better understand its patterns and improve forecasting accuracy. The most common components of a time series are trend, seasonality, and remainder. Shown below, we can also decompose these sales numbers into trend, seasonal and residuals. Spikes can be observed around the holidays.
