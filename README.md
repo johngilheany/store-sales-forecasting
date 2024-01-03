@@ -18,10 +18,10 @@ Time series decomposition is a statistical technique that involves breaking down
 <img src="imgs/seasonal_decomp.png" width="500"/> 
 
 Below we can see average weekly sales. Store 20 is the store with the highest revenue, averaging almost \$30K per week, with Store 5 being the smallest, averaging just \$5K per week.    
-<img src="imgs/avg_weekly_sales.png" width="500"/> 
+<img src="imgs/avg_weekly_sales.png" width="700"/> 
 
 Below we can see average weekly sales per square foot. Store 43 was the most efficient store, selling over \$0.30 per square foot per week, with Store 9 being the least efficient, selling just \$0.07 per square foot per week.    
-<img src="imgs/avg_weekly_sales_per_sqft.png" width="500"/>
+<img src="imgs/avg_weekly_sales_per_sqft.png" width="700"/>
 
 Below, we can also see the autocorrelation and partial autocorrelations of the total weekly sales data. Autocorrelation (ACF) and partial autocorrelation (PACF) are statistical metrics employed in time series analysis to examine the association between a given time series and its past values. Autocorrelation assesses the correlation between a data point and its preceding values at different time lags, aiding in the identification of recurring patterns or cycles within the data. Partial autocorrelation, while also gauging the direct relationship between two time points, adjusts for the influence of intermediary data points. It plays a crucial role in determining the autoregressive component's order in a time series model. Peaks beyond the confidence interval in the partial autocorrelation function suggest potential lag orders relevant for an AR model.
 <br>
@@ -46,11 +46,11 @@ A Prophet model was run on the data, adding regressors for predictive variables 
 
 The final Prophet model had an R-Squared score of 0.97, and forecasted weekly sales with less than a 6% margin of error. The actual sales (shown in blue) vs. forecasted sales (shown in orange) performance is shown below. This model was the most accurate, as it picked up on both trends/seasonality as well as magnitude of trends. 
 <br>
-<img src="imgs/prophet_actual_vs_pred.png" width="500"/>
+<img src="imgs/prophet_actual_vs_pred.png" width="700"/>
 
 ### **SARIMAX Model**
 The SARIMAX (Seasonal AutoRegressive Integrated Moving Average with eXogenous factors) represents an advanced approach to time series forecasting, building upon the capabilities of the ARIMA model. It integrates crucial components to comprehensively capture patterns within time series data, including the AutoRegressive (AR), Integrated (I), and Moving Average (MA) components for non-seasonal dynamics, the Seasonal component to address recurring patterns, and the eXogenous (X) Factors component to account for external influences. These components collectively contribute to a sophisticated framework that accommodates intricate temporal dependencies and external factors. SARIMAX is parameterized by specific orders for each component, and its parameters are estimated through historical time series data. The model's flexibility, particularly in accommodating exogenous variables, makes it a valuable tool for forecasting tasks.
 
 In order to use SARIMA we will need to choose p,d,q values for the ARIMA, and P,D,Q values for the Seasonal component. An Auto ARIMA was used, where the model itself generated the optimal p, d, and q values. The final model used was `ARIMA(2,0,2)(1,0,0)[52]`. In this model, `p=2` representing the order of the AutoRegressive (AR) component, `d=0` signifying the order of differencing applied to make the time series stationary, `q=2` denotes the order of the Moving Average (MA) component. The number 52 suggests a seasonal pattern with a period of 52 time units (weeks in a year). Shown below is the actual sales (shown in blue) vs. forecasted sales (shown in orange).
 <br>
-<img src="imgs/sarimax_actual_vs_pred1.png" width="500"/>
+<img src="imgs/sarimax_actual_vs_pred1.png" width="700"/>
